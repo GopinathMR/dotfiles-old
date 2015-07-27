@@ -1,0 +1,9 @@
+// ref : http://gradle.1045684.n5.nabble.com/Colourizing-console-output-td3073839.html#a3194425
+System.setProperty("org.gradle.color.normal","DEFAULT");
+System.setProperty("org.gradle.color.header","MAGENTA")
+System.setProperty("org.gradle.color.identifier","CYAN")
+System.setProperty("org.gradle.color.description","WHITE")
+System.setProperty("org.gradle.color.progressstatus","RED")
+System.setProperty("org.gradle.color.failure","RED")
+System.setProperty("org.gradle.color.error","RED")
+System.setProperty("org.gradle.color.info","YELLOW")

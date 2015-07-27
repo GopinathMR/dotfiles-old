@@ -1,0 +1,37 @@
+[alias]
+    glog = log --color --graph --pretty=format:\"%C(yellow)%h%C(reset) %s%C(bold red)%d%C(reset) %C(green)%ad%C(reset) %C(blue)[%an]%C(reset)\" --relative-date --decorate
+    unstage = reset HEAD --
+    compact = "!sh -c 'git fetch -p && git fetch -p --tags && git gc'"
+[core]
+	editor = mvim -f
+	excludesfile = ~/dotfiles/.gitignore_global
+    unstage = reset HEAD --
+    restore = checkout --
+[color]
+	ui = true
+	diff = true
+[commmit]
+    template = ~/dotfiles/git-templates/commit-message-template.txt
+# color {{{
+[color]
+    branch = auto
+    diff = auto
+    status = auto
+
+[color "branch"]
+    current = red reverse
+    local = blue reverse
+    remote = green
+
+[color "diff"]
+    meta = yellow
+    frag = magenta
+    old = red bold
+    new = green
+    plain = white
+
+[color "status"]
+    added = white reverse
+    changed = green reverse
+    untracked = cyan reverse
+# }}}

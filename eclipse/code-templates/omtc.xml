@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><templates><template autoinsert="true" context="java" deleted="false" description="Odin MockTest class" enabled="true" name="omtc">package ${enclosing_package};
+
+import org.junit.Before;
+import org.junit.Test;
+import org.junit.runner.RunWith;
+import org.mockito.InjectMocks;
+import org.mockito.MockitoAnnotations;
+import org.powermock.api.mockito.PowerMockito;
+import org.powermock.core.classloader.annotations.PrepareForTest;
+import org.powermock.modules.junit4.PowerMockRunner;
+
+import com.chegg.odin.Midgard;
+import com.chegg.odin.configuration.OdinConfigurationManager;
+
+/**
+ * Unit test class for {@link ${testClass}}
+ * @author ${user}
+ *
+ */
+@RunWith(PowerMockRunner.class)
+@PrepareForTest({Midgard.class, OdinConfigurationManager.class, ${testClass}.class})
+public class ${testClass}Test {
+    
+    @InjectMocks
+    private ${testClass} theInstance;
+    
+    /**
+     * Default constructor.
+     */
+    public ${testClass}Test () {
+    }
+    
+    @Before
+    public void setup() throws Exception {
+        MockitoAnnotations.initMocks(this);
+        theInstance = new ${testClass}();
+		PowerMockito.mockStatic(${testClass}.class);
+    }
+
+    @Test
+    public void testOne() throws Exception {
+    }
+}
+
+</template></templates>

@@ -1,0 +1,13 @@
+" vrapper Eclipse-Vim plugin config file
+" ref : http://vrapper.sourceforge.net/documentation/?page=6
+set incsearch
+set hlsearch
+set expandtab
+set tabstop=4
+set shiftwidth=4
+set hlsearch
+set smartcase
+set incsearch
+set autochdir
+set gvimpath=/Users/gopi/softwares/scripts/mvim
+set gvimargs=-f -p1

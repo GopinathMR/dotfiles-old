@@ -1,0 +1,10 @@
+#!/bin/sh
+
+# add this file to .git/hooks/
+# name it commit-msg
+# make sure it is executable (use chmod +x commit-msg)
+
+ticket=$(git symbolic-ref HEAD | sed "s/refs\/heads\///g")
+if [ -n "$ticket" ]; then
+      echo "$ticket" >> $1
+fi
